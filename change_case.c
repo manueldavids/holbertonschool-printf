@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * handle_specifier - Processes a single format specifier.
+ * manage_specifier - Processes a single format specifier.
  * @format: The format specifier to handle.
  * @args: The list of arguments for the specifier.
  *
  * Return: The number of characters printed for the specifier.
  */
 
-int handle_specifier(const char *format, va_list args)
+int manage_specifier(const char *format, va_list args)
 {
 	int count = 0;
 
@@ -20,11 +20,16 @@ int handle_specifier(const char *format, va_list args)
 	switch (*format)
 	{
 		case 'c': /*%c char specifier*/
-			count += manage_c (args);
+			count += manage_c(args);
 			break;
+		case 's':
+			count += manage_s(args);
 		case 'i':
 		case 'd': /*%d & %i # specifier*/
 			count += manage_di(args);
+			break;
+		case '%':
+			count += _putchar('%');
 			break;
 		default: /*Unknown specifier*/
 			count += _putchar('%');
@@ -35,7 +40,7 @@ int handle_specifier(const char *format, va_list args)
 }
 
 /**
- * handlers_c - Handles the %c format specifier for characters.
+ * manage_c - Handles the %c format specifier for characters.
  * @args: The list of variable arguments passed to _printf.
  *
  * Return: The number of characters printed.
@@ -63,7 +68,7 @@ int manage_c(va_list args)
 }
 
 /**
- * handlers_s - Handles the %s format specifier for strings.
+ * manage_s - Manages the %s format specifier for strings.
  * @args: The list of variable arguments passed to _printf.
  *
  * Return: The number of characters printed.
@@ -98,7 +103,7 @@ int manage_s(va_list args)
 }
 
 /**
- * handlers_di - Handles the conversion specifiers 'd' and 'i'
+ * manage_di - Handles the conversion specifiers 'd' and 'i'
  * @args: Variadic arguments list containing the integer to print
  * Return: The number of characters printed
  */
@@ -110,14 +115,14 @@ int manage_di(va_list args)
 	char buffer[20];
 	int i = 0;
 
-	if (n < 0) /* Handle negative numbers */
+	if (n < 0) /* Negative numbers */
 	{
 		count += _putchar('-'); /* Prints '-' before negative numbers */
 		num = -n; /* Convert to positive for printing */
 	}
 	else
 	{
-		num = n; /* Handles regular numbers */
+		num = n; /* Regular numbers */
 	}
 	do {
 		buffer[i++] = (num % 10) + '0'; /* Get the last digit */
