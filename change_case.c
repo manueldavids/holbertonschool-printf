@@ -17,20 +17,16 @@ int handle_specifier(const char *format, va_list args)
 		count += _putchar('%');
 		return (count);
 	}
-
 	switch (*format)
 	{
-		case 'c': 
-			count += handlers_c(args);
-			break;
-		case 's':
-			count += handlers_s(args); /* Manage strings */
+		case 'c': /*%c char specifier*/
+			count += manage_c (args);
 			break;
 		case 'i':
-		case 'd':
-			count += handlers_di(args);
+		case 'd': /*%d & %i # specifier*/
+			count += manage_di(args);
 			break;
-		default:
+		default: /*Unknown specifier*/
 			count += _putchar('%');
 			count += _putchar(*format);
 			break;
@@ -45,7 +41,7 @@ int handle_specifier(const char *format, va_list args)
  * Return: The number of characters printed.
  */
 
-int handlers_c(va_list args)
+int manage_c(va_list args)
 {
 	int count = 0;
 	char c = va_arg(args, int);
@@ -72,7 +68,7 @@ int handlers_c(va_list args)
  *
  * Return: The number of characters printed.
  */
-int handlers_s(va_list args)
+int manage_s(va_list args)
 {
 	char *p = va_arg(args, char *);
 	int count = 0;
@@ -106,7 +102,7 @@ int handlers_s(va_list args)
  * @args: Variadic arguments list containing the integer to print
  * Return: The number of characters printed
  */
-int handlers_di(va_list args)
+int manage_di(va_list args)
 {
 	int n = va_arg(args, int);
 	int count = 0;
