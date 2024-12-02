@@ -66,7 +66,7 @@ A format specifier is a special sequence of characters used in formatted input a
 ## **Compilation Instructions**
 
 All the files that were used are compiled using:  
-```bash
+
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 ---
