@@ -94,6 +94,7 @@ For more details, refer to the `man 3 printf` documentation.
 ---
 
 ## **Contributors**
+
 - **Joseph Gleason**  
 - **Manuel Santana**  
 - **Gustavo Guevara**
