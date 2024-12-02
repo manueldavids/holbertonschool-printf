@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * _printf - Custom printf implementation to handle various format specifiers.
+ * @format: The format string containing the characters & specifiers to print.
+ *
+ * Return: The total number of characters printed
+ */
 int _printf(const char *format, ...)
 {
 	int count = 0;
@@ -33,6 +39,5 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (count + 1);
 
-	return(count);
-	
+	return (count);
 }
