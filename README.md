@@ -92,12 +92,7 @@ Currently, we are in the foundational phase of learning C, and this project serv
 For more details, refer to the `man 3 printf` documentation.
 
 ---
-
 ## **Contributors**
-
-### **Joseph Gleason**  
----
-### **Manuel Santana**  
----
-### **Gustavo Guevara**
----
+- **Joseph Gleason**  
+- **Manuel Santana**  
+- **Gustavo Guevara**

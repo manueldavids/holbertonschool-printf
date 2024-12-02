@@ -14,21 +14,14 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	if (format == NULL)
 	{
-		format = "(null)";
-		while (*format)
-		{
-			_putchar(*format);
-			format++;
-		}
-		_putchar('\n');
-		return (0);
+		return (-1);
 	}
 	while (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
-			manage_specifier(format, args);
+			count += manage_specifier(format, args);
 		}
 		else
 		{
@@ -37,7 +30,5 @@ int _printf(const char *format, ...)
 		format++;
 	}
 	va_end(args);
-	return (count + 1);
-
 	return (count);
 }
