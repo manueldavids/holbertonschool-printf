@@ -12,11 +12,6 @@ int manage_specifier(const char *format, va_list args)
 {
 	int count = 0;
 
-	if (*format == '%')
-	{
-		count += _putchar('%');
-		return (count);
-	}
 	switch (*format)
 	{
 		case 'c': /*%c char specifier*/
@@ -24,6 +19,7 @@ int manage_specifier(const char *format, va_list args)
 			break;
 		case 's':
 			count += manage_s(args);
+			break;
 		case 'i':
 		case 'd': /*%d & %i # specifier*/
 			count += manage_di(args);

@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			change_case(format, args);
+			manage_specifier(format, args);
 		}
 		else
 		{
