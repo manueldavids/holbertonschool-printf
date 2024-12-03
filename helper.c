@@ -12,6 +12,9 @@ void convert_to_base(unsigned int num, int base, char *buffer, int is_uppercase)
     const char *digits = is_uppercase ? "0123456789ABCDEF" : "0123456789abcdef";
     int i = 0;
     int j = 0;
+	int start = 0;
+	int m = 0;
+	int k = 0;
 
     if (num == 0)
     {
@@ -31,5 +34,26 @@ void convert_to_base(unsigned int num, int base, char *buffer, int is_uppercase)
         buffer[j] = buffer[i - j - 1];
         buffer[i - j - 1] = temp;
     }
-}
 
+
+    while (buffer[start] == '0' && start < i - 1) {
+        start++;
+    }
+    for (j = 0; j < i - start; j++) {
+        buffer[j] = buffer[start + j];
+    }
+    buffer[i - start] = '\0';  /* Null-terminate the new string */
+
+	if (i > 2 && buffer[0] == '0' && buffer[1] == '0') {
+
+
+        while (k < i && buffer[k] == '0') {
+            k++;  /*** Skip over leading zeros */
+        }
+
+        for (m = 0; k < i; m++, k++) {
+            buffer[m] = buffer[k];
+        }
+        buffer[m] = '\0';  /*** Null-terminate the string */
+    }
+}
