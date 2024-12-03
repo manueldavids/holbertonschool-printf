@@ -11,6 +11,7 @@ void convert_base(unsigned int num, int base, char *buffer, int is_uppercase)
 {
 	const char *digits;
 	int i, j;
+
 	digits = is_uppercase ? "0123456789ABCDEF" : "0123456789abcdef";
 
 	i = 0;
