@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * manage_di - Handles the conversion specifiers 'd' and 'i'.
  * @args: Variadic arguments list containing the integer to print.

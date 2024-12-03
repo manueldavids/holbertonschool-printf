@@ -9,7 +9,7 @@
 int manage_p(va_list args)
 {
 	unsigned long address = (unsigned long)va_arg(args, void*);
-	char buffer[17];  /* Enough for 16-digit hex + "0x" */
+	char buffer[16];  /* Enough for 16-digit hex + "0x" */
 	int count = 0;
 	int i;
 
