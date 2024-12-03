@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * manage_specifier - Processes a single format specifier.
  * @format: The format specifier to handle.
@@ -7,14 +6,12 @@
  *
  * Return: The number of characters printed for the specifier.
  */
-
 int manage_specifier(const char *format, va_list args)
 {
 	int count = 0;
 
-	if(!format)
-		return(-1);
-
+	if (!format)
+		return (-1);
 	switch (*format)
 	{
 		case 'c': /*%c char specifier*/
