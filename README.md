@@ -98,3 +98,5 @@ For more details, refer to the `man 3 printf` documentation.
 - **Joseph Gleason** - [GitHub](https://github.com/JosephGleason)
 - **Manuel Santana** - [GitHub](https://github.com/manueldavids)
 - **Gustavo Guevara** - [GitHub](https://github.com/GGGtrainer)
+
+Repository: [holbertonschool-printf](https://github.com/manueldavids/holbertonschool-printf)
