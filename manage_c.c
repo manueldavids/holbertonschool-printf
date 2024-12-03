@@ -9,13 +9,8 @@
 int manage_c(va_list args)
 {
 	int count = 0;
-	char c = va_arg(args, int);
 
-	if (c == 0)
-	{
-		return (-1);
-	}
-	count += _putchar(c);
+	count += _putchar(va_arg(args, int));
 
 	return (count);
 }
