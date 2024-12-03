@@ -12,6 +12,9 @@ int manage_specifier(const char *format, va_list args)
 {
 	int count = 0;
 
+	if(!format)
+		return(-1);
+
 	switch (*format)
 	{
 		case 'c': /*%c char specifier*/
