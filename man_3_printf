@@ -112,12 +112,16 @@ It also does not handle integer or floating-point specifiers such as
 or
 .B %u.
 
-.SH AUTHOR
-Written by Joseph Gleason, Manuel Santana, Gustavo Guevara.
-
 .SH BUGS
 If you encounter any issues, please report them to [Your Contact Information or GitHub Repository URL].
 
 .SH SEE ALSO
 .BR printf (3)
+
+.SH AUTHOR
+.SH AUTHOR
+Written by:
+Joseph Gleason
+Manuel Santana
+Gustavo Guevara
 
