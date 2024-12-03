@@ -28,24 +28,24 @@ int manage_specifier(const char *format, va_list args)
 			count += _putchar('%');
 			break;
 		case 'u':
-    			count += manage_u(args);
-    			break;
+			count += manage_u(args);
+			break;
 		case 'o':
-    			count += manage_o(args);
-    			break;
+			count += manage_o(args);
+			break;
 		case 'x':
-    			count += manage_x(args, 0); /* Lowercase hexadecimal */
-    			break;
+			count += manage_x(args, 0); /* Lowercase hexadecimal */
+			break;
 		case 'X':
-    			count += manage_x(args, 1); /* Uppercase hexadecimal */
-    			break;
+			count += manage_x(args, 1); /* Uppercase hexadecimal */
+			break;
 		case 'p':
 			count += manage_p(args);
 			break;
 		default: /* Unknown specifier */
-            		count += _putchar('%');
-            		count += _putchar(*format);
-      			break;
+			count += _putchar('%');
+			count += _putchar(*format);
+			break;
 	}
 	return (count);
 }

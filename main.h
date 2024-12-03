@@ -14,6 +14,6 @@ int manage_u(va_list args);
 int manage_o(va_list args);
 int manage_p(va_list args);
 int manage_x(va_list args, int is_uppercase);
-void convert_to_base(unsigned int num, int base, char *buffer, int is_uppercase);
+void convert_base(unsigned int num, int base, char *buffer, int is_uppercase);
 
 #endif
