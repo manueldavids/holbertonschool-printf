@@ -95,6 +95,6 @@ For more details, refer to the `man 3 printf` documentation.
 
 ## **Contributors**
 
-- **Joseph Gleason**  
-- **Manuel Santana**  
-- **Gustavo Guevara**
+- **Joseph Gleason** - [GitHub](https://github.com/JosephGleason)
+- **Manuel Santana** - [GitHub](https://github.com/manueldavids)
+- **Gustavo Guevara** - [GitHub](https://github.com/GGGtrainer)
